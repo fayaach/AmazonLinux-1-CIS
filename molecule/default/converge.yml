@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  tasks:
+
+    - name: "Include ansible-role-cis-amazon-linux"
+      include_role:
+        name: "ansible-role-cis-amazon-linux"

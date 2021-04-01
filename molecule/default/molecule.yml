@@ -1,0 +1,13 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: amazonlinux
+    image: amazonlinux:1
+    pre_build_image: true
+provisioner:
+  name: ansible
+verifier:
+  name: ansible

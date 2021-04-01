@@ -1,0 +1,16 @@
+---
+- name: Prepare
+  hosts: all
+  gather_facts: no
+
+  tasks:
+
+    - name: Ensuring prerequisites are installed
+      package:
+        name: '{{ item }}'
+        state: present
+      loop:
+          - sudo
+          - initscripts
+          - iptables
+          - openssh
